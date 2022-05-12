@@ -11,7 +11,8 @@ tasks:
       bundle exec ruby server.rb
 
   - name: 'open-preview'
-    command:
+    command: |
+      gp await-port 8080
       gp preview $(gp url 8080)
 
 ports:
