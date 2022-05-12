@@ -17,4 +17,4 @@ tasks:
 
 ports:
   - port: 8080
-    onOpen: ignore
+    onOpen: open-preview
