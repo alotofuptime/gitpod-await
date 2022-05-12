@@ -1,6 +1,6 @@
 tasks:
   - name: bundle-install
-    init: bundle-install
+    init: bundle install
   
   - name: server-run
     command: bundle exec ruby server.rb
