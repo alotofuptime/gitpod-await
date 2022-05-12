@@ -1,0 +1,14 @@
+tasks:
+  - name: bundle-install
+    init: bundle-install
+  
+  - name: server-run
+    command: bundle exec ruby server.rb
+
+  - name: 'open-preview'
+    command:
+      gp preview $(gp url 8080)
+
+ports:
+  - port: 8080
+    onOpen: open-preview
