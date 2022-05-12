@@ -1,9 +1,13 @@
 tasks:
   - name: bundle-install
-    init: bundle install
+    init: | 
+      bundle install
+      gp sync-done bundle-install
   
   - name: server-run
-    command: bundle exec ruby server.rb
+    command: | 
+      gp sync-await bundle-install
+      bundle exec ruby server.rb
 
   - name: 'open-preview'
     command:
